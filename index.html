@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude AI - Your ideas, amplified</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Sora', sans-serif;
+            background-color: #faf9f7;
+        }
+        .chat-container {
+            background-color: #f5f3f0;
+            border-radius: 24px;
+        }
+        .heading {
+            font-size: 76px;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+        .chat-message {
+            max-width: 85%;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-6 py-12 flex flex-col md:flex-row items-start justify-between gap-20">
+        <!-- Left Section -->
+        <div class="md:w-1/2 max-w-2xl">
+            <!-- Logo -->
+            <div class="mb-24">
+                <div class="flex items-center gap-2">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#C84C25"/>
+                        <path d="M8 12L12 8L16 12L12 16L8 12Z" fill="white"/>
+                    </svg>
+                    <span class="text-2xl font-normal tracking-tight">Claude</span>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="mb-16">
+                <h1 class="heading font-normal mb-6">Your ideas,<br>amplified</h1>
+                <p class="text-xl text-gray-700 leading-relaxed">Privacy-first AI that helps you create<br>in confidence.</p>
+            </div>
+
+            <!-- Login Form -->
+            <div class="bg-white rounded-3xl p-8 shadow-sm w-full max-w-md">
+                <button class="w-full mb-4 flex items-center justify-center gap-3 border border-gray-300 rounded-lg py-3 px-4 hover:bg-gray-50 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285f4"/>
+                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34a853"/>
+                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#fbbc05"/>
+                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#ea4335"/>
+                    </svg>
+                    <span class="text-[15px] text-gray-900">Continue with Google</span>
+                </button>
+
+                <div class="flex items-center my-4">
+                    <div class="flex-grow border-t border-gray-200"></div>
+                    <span class="px-4 text-gray-500 text-sm">OR</span>
+                    <div class="flex-grow border-t border-gray-200"></div>
+                </div>
+
+                <input type="email" placeholder="Enter your personal or work email" class="w-full px-4 py-3 border border-gray-300 rounded-lg mb-4 text-[15px] placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#C84C25] focus:border-transparent">
+                
+                <button class="w-full bg-[#C84C25] text-white rounded-lg py-3 hover:bg-[#B43D1B] transition-colors text-[15px] font-medium">
+                    Continue with email
+                </button>
+
+                <p class="text-sm text-gray-500 mt-4">
+                    By continuing, you acknowledge Anthropic's 
+                    <a href="#" class="underline hover:text-gray-700">Privacy Policy</a>.
+                </p>
+            </div>
+
+            <!-- Learn More Button -->
+            <div class="mt-12">
+                <button class="flex items-center gap-2 px-6 py-3 bg-[#E9E5E0] rounded-full hover:bg-[#E0DCD7] transition-colors text-[15px]">
+                    Learn more
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Right Section - Chat Preview -->
+        <div class="md:w-1/2 md:pl-8">
+            <div class="chat-container p-6">
+                <div class="flex items-start gap-3 mb-4">
+                    <div class="w-8 h-8 bg-[#E9E5E0] rounded-full flex items-center justify-center shrink-0">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#666666"/>
+                            <path d="M8 12L12 8L16 12L12 16L8 12Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="chat-message bg-[#E9E5E0] rounded-2xl py-3 px-4 text-[15px]">
+                        Claude, create a report to analyze product usage and user feedback.
+                    </div>
+                </div>
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 bg-[#E9E5E0] rounded-full flex items-center justify-center shrink-0">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#666666"/>
+                            <path d="M8 12L12 8L16 12L12 16L8 12Z" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="chat-message bg-white rounded-2xl py-3 px-4 text-[15px]">
+                        Here's the report.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
